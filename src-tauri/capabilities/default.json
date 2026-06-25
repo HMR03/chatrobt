@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nickknapton12/cargo-tauri/v2.x/crates/tauri-utils/schema/capabilities.json",
+  "identifier": "default",
+  "description": "Default capabilities for the app",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "sql:default",
+    "sql:allow-load",
+    "sql:allow-execute",
+    "sql:allow-select",
+    "sql:allow-close",
+    "store:default",
+    "autostart:default",
+    "global-shortcut:default"
+  ]
+}

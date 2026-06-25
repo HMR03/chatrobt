@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nickknapton12/cargo-tauri/v2.x/crates/tauri-cli/schema.json",
+  "productName": "AI Chat",
+  "version": "0.1.0",
+  "identifier": "com.chatrobt.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "AI Chat",
+        "width": 1100,
+        "height": 750,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "decorations": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' https://api.deepseek.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+    },
+    "trayIcon": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true,
+      "menuOnLeftClick": false
+    }
+  }
+}
